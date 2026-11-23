@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171923">
+<title>Happy Birthday, Telugu Ammayi!</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+:root{--ink:#171923;--paper:#f4efe6;--pink:#f5a9a2;--red:#d65c53;--gold:#e7bd75;--muted:#a9a39b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:'DM Sans',sans-serif}
+button{font:inherit;cursor:pointer}.mono{font-family:'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;color:var(--gold)}
+h1,h2,h3,p{margin-top:0}h1,h2{font-family:'Playfair Display',serif;letter-spacing:-.04em}
+#intro{min-height:100svh;display:grid;place-items:center;padding:30px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 20%,#55353e 0,transparent 40%),linear-gradient(145deg,#171923,#25212b 70%,#392a32)}
+#intro:before{content:"";position:absolute;width:65vw;height:65vw;border:1px solid #ffffff18;border-radius:50%;right:-22vw;top:-25vw;box-shadow:0 0 0 5vw #ffffff08,0 0 0 10vw #ffffff05}
+.intro-card{max-width:760px;position:relative;text-align:left;border:1px solid #ffffff24;background:#1719239c;backdrop-filter:blur(8px);padding:clamp(28px,7vw,68px);box-shadow:18px 18px 0 #d65c5325}
+.stamp{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:8px 12px;transform:rotate(-3deg);font: .68rem 'DM Mono';letter-spacing:.12em}
+.intro-card h1{font-size:clamp(3.3rem,10vw,7.5rem);line-height:.92;margin:32px 0 24px}
+.intro-card h1 span{color:var(--pink);font-style:italic}.intro-card p{max-width:510px;color:#d8d1ca;font-size:1.08rem;line-height:1.8}
+.primary{border:0;background:var(--pink);color:#211b22;padding:15px 23px;font-weight:700;border-radius:2px;box-shadow:5px 5px 0 var(--red);transition:.2s}
+.primary:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--red)}
+#experience{display:none}.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,5vw,64px);border-bottom:1px solid #ffffff1c;position:sticky;top:0;background:#171923eF;backdrop-filter:blur(12px);z-index:5}
+.topbar .brand{font: .72rem 'DM Mono';letter-spacing:.12em;color:var(--pink)}.topbar a{color:var(--paper);text-decoration:none;font-size:.82rem}
+main{max-width:1100px;margin:auto;padding:0 clamp(18px,5vw,60px)}
+.hero{padding:clamp(65px,12vw,130px) 0 75px;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+.hero h2{font-size:clamp(3rem,7vw,6.5rem);line-height:.94;margin:16px 0 25px}.hero h2 em{color:var(--pink)}
+.hero p{color:#c7c0ba;line-height:1.85;max-width:540px}
+.hero-photo{position:relative;transform:rotate(2deg);border:10px solid #eee7dc;background:#eee7dc;box-shadow:18px 20px 0 #d65c5338}
+.hero-photo img{width:100%;height:450px;object-fit:cover;object-position:center 35%;display:block;filter:saturate(.86)}
+.photo-note{color:#3b3435;background:#eee7dc;padding:9px 3px 0;font: .68rem 'DM Mono';text-align:center;letter-spacing:.1em}
+.section{padding:76px 0;border-top:1px solid #ffffff20}
+.section-head{display:flex;gap:25px;align-items:baseline;margin-bottom:28px}.num{font: .8rem 'DM Mono';color:var(--red)}h3{font:clamp(2rem,4.5vw,3.8rem) 'Playfair Display';letter-spacing:-.035em;margin:0}
+.lead{font-size:1.08rem;line-height:1.85;color:#d1c9c1;max-width:760px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:35px}
+.time{border-top:2px solid var(--pink);padding:15px 10px 0 0;color:#d6cec7;font-size:.88rem;line-height:1.6}.time b{display:block;color:var(--gold);font: .7rem 'DM Mono';margin-bottom:9px}
+.prank{background:#2b2029;border:1px solid #a85a5a66;padding:clamp(22px,5vw,44px);position:relative;overflow:hidden}
+.prank:after{content:"CASE FILE #001";position:absolute;right:18px;top:20px;font: .65rem 'DM Mono';color:#d98a83;transform:rotate(5deg)}
+.prank h3{max-width:620px;color:#ffc1b7}.prank p{line-height:1.8;color:#e2d7d1;max-width:700px}
+.scoreboard{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:25px}
+.score{background:#171923;padding:18px}.score strong{display:block;font:2rem 'Playfair Display';color:var(--gold)}.score small{color:#bcb2ad}
+.award{margin-top:18px;border:1px dashed var(--gold);padding:15px;color:#f3d8a8;font: .75rem 'DM Mono';line-height:1.7}
+.cinema{background:#111219;padding:clamp(20px,5vw,42px);border:1px solid #ffffff20}
+.cinema-top{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:22px}
+.filmstrip{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.film{background:#24232a;padding:10px;border:1px solid #ffffff1c}.film img{width:100%;height:260px;object-fit:cover;display:block;filter:saturate(.8)}
+.film figcaption{padding:13px 5px 7px;color:#e6dcd5;line-height:1.55;font-size:.9rem}
+.warning{border-left:3px solid var(--red);padding:14px 18px;margin-top:22px;background:#d65c5310;color:#e6d8d2;line-height:1.75}
+.patriotic{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:center}
+.patriotic img{width:100%;max-height:470px;object-fit:cover;object-position:center 35%;border:8px solid #eee7dc;transform:rotate(-1deg)}
+.patriotic h3{color:var(--gold)}.patriotic p{color:#d2c9c1;line-height:1.8}
+.heart{background:#eee7dc;color:#24202a;padding:clamp(25px,6vw,55px);position:relative}
+.heart .mono{color:#a74d4b}.heart h3{font-size:clamp(2.3rem,5vw,4.4rem);max-width:720px}.heart p{line-height:1.95;max-width:780px;color:#51484a}
+.final{padding:90px 0 110px;text-align:center}.final h2{font-size:clamp(3rem,8vw,6.5rem);line-height:.95;margin:20px auto}.final h2 span{color:var(--pink)}.final p{color:#d1c8c2;line-height:1.85;max-width:650px;margin:0 auto 20px}
+.goofy{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center;text-align:left;margin:40px auto 55px;max-width:800px}
+.goofy img{width:100%;max-height:430px;object-fit:cover;object-position:center 30%;border:9px solid #eee7dc;transform:rotate(2deg)}
+.goofy blockquote{margin:0;color:#e9dcd5;font:clamp(1.3rem,3vw,2rem) 'Playfair Display';line-height:1.35}
+.goofy blockquote small{display:block;font: .7rem 'DM Mono';color:var(--gold);margin-top:17px;line-height:1.8}
+.signature{color:var(--gold);font: .75rem 'DM Mono';letter-spacing:.1em;line-height:2}
+footer{text-align:center;padding:20px;color:#827b7a;font: .65rem 'DM Mono';border-top:1px solid #ffffff1a}
+#toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#f4efe6;color:#171923;padding:12px 18px;opacity:0;pointer-events:none;transition:.3s;z-index:20;font-size:.85rem}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.confetti{position:fixed;top:-15px;width:8px;height:12px;z-index:30;pointer-events:none;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:720px){.hero,.patriotic,.goofy{grid-template-columns:1fr}.hero{gap:32px}.hero-photo{max-width:440px;margin:auto}.hero-photo img{height:390px}.timeline{grid-template-columns:1fr 1fr}.timeline .time:last-child{grid-column:span 2}.filmstrip{grid-template-columns:1fr}.film img{height:320px}.scoreboard{grid-template-columns:1fr}.topbar{padding:14px 18px}.section{padding:58px 0}.goofy img{max-height:380px;max-width:420px;margin:auto}.goofy blockquote{padding:0 5px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section id="intro">
+  <div class="intro-card">
+    <span class="stamp">A VERY UNOFFICIAL BIRTHDAY PRODUCTION</span>
+    <div class="mono" style="margin-top:30px">For one Telugu Ammayi · Nikhila Lanke</div>
+    <h1>Hey,<br><span>Telugu Ammayi.</span></h1>
+    <p>Someone's birthday is here. And someone else has spent an unreasonable amount of time putting together this tiny internet tribute. There will be appreciation, questionable evidence, and absolutely no guarantee of dignity.</p>
+    <button class="primary" id="openBtn">Open your surprise <span aria-hidden="true">↗</span></button>
+  </div>
+</section>
+
+<div id="experience">
+  <nav class="topbar"><span class="brand">NIKHILA.LANKE // BIRTHDAY EDITION</span><a href="#birthday">Skip to the wishes ↓</a></nav>
+  <main>
+    <section class="hero">
+      <div class="reveal">
+        <div class="mono">A message from your favourite prank survivor</div>
+        <h2>Happy birthday,<br><em>Telugu Ammayi!</em></h2>
+        <p>Have a great year ahead. Enjoy as much as you can! This year is going to be your year to move up that career ladder — be enthusiastic as always, keep learning, and never forget to do DSA… and teach me along the way. I’m counting on you. 😌</p>
+        <button class="primary" onclick="document.querySelector('#chapters').scrollIntoView({behavior:'smooth'})">Proceed to the evidence ↓</button>
+      </div>
+      <div class="hero-photo reveal"><img src="assets/hood-selfie.jpg" alt="Nikhila smiling in a checked hooded shawl"><div class="photo-note">EXHIBIT A · THE BIRTHDAY GIRL</div></div>
+    </section>
+
+    <section class="section reveal" id="chapters">
+      <div class="section-head"><span class="num">01 / ORIGIN STORY</span><h3>Accenture to WhatsApp…</h3></div>
+      <p class="lead">Who knew an Accenture internship would quietly turn into one of those friendships that just sticks? It started with WhatsApp conversations, then the random chats became regular chats, and somewhere along the way you became one of my favourite people to bother. The plot twist? We still haven't met in person. Our friendship has somehow completed so many seasons without a single face-to-face episode. 😂</p>
+      <div class="timeline">
+        <div class="time"><b>CHAPTER 01</b>Accenture internship</div>
+        <div class="time"><b>CHAPTER 02</b>First WhatsApp conversations</div>
+        <div class="time"><b>CHAPTER 03</b>Random chats become regular</div>
+        <div class="time"><b>CHAPTER 04</b>Best-friend territory</div>
+        <div class="time"><b>UNLOCKED?</b>Meet in real life. Pending…</div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="prank">
+        <div class="section-head"><span class="num">02 / CLASSIFIED INCIDENT</span><h3>THE GREAT PRANK WAR: A HISTORIC FAILURE</h3></div>
+        <p>Two masterminds. One carefully imagined master plan. Confidence levels that could probably be seen from space. Nikhila and her roommate entered the prank arena fully convinced that I was about to become their next victim.</p>
+        <p>And then the universe checked the script.</p>
+        <h3 style="font-size:clamp(2.5rem,7vw,5rem);margin:18px 0;color:#fff">THEY GOT PRANKED INSTEAD.</h3>
+        <p>That’s right, Telugu Ammayi. The plan had a plot twist, and the plot twist was you two. Please take your time recovering. The rematch request will be reviewed by the committee (me).</p>
+        <div class="scoreboard">
+          <div class="score"><strong>1</strong><small>Prank survivor: Me</small></div>
+          <div class="score"><strong>0</strong><small>Mastermind success rate</small></div>
+          <div class="score"><strong>∞</strong><small>Confidence before the reveal</small></div>
+        </div>
+        <div class="award">OFFICIAL CERTIFICATE<br>Presented to: Nikhila & Roommate<br>For outstanding confidence, creative planning, and an unforgettable reverse-prank performance.<br>Signed: The undefeated (for now) opponent.</div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head"><span class="num">03 / THE CINEMATIC UNIVERSE</span><h3>Google Meet Movie Club</h3></div>
+      <div class="cinema">
+        <div class="cinema-top"><span class="mono">NOW SHOWING · REMOTE EDITION</span><span class="mono">SCREEN SHARE ON</span></div>
+        <p class="lead">Different places, one Google Meet, and a screen share doing the work of an entire multiplex. We even brought Malayalam movies into the mix. Nikhila may not understand every dialogue, but that tiny language barrier has never been enough to cancel movie night.</p>
+        <div class="filmstrip">
+          <figure class="film"><img src="assets/saree-laugh.jpg" alt="Nikhila laughing outdoors in a peach saree"><figcaption>Language barrier: 100%. Movie enthusiasm: 1000%. Subtitles deserve a special mention.</figcaption></figure>
+          <figure class="film"><img src="assets/market-memory.jpg" alt="A shared photo memory"><figcaption>Our unofficial international film club: no tickets, no theatre seats, just Google Meet and good company.</figcaption></figure>
+        </div>
+        <div class="warning"><strong>A tiny safety announcement from the cinema committee:</strong> Smoking causes cancer. Smoking kills. Alcohol can seriously harm your health. Be safe, never drive after drinking, and don't let anyone pressure you into it. Our movie nights are better with snacks, water and everyone getting home safely. 😌</div>
+      </div>
+    </section>
+
+    <section class="section reveal patriotic">
+      <img src="assets/proud-indian.jpg" alt="Nikhila looking up at the Indian flag">
+      <div><div class="mono">04 / PATRIOTISM LEVEL: MAXIMUM</div><h3>Bro's a proud Indian. 🇮🇳</h3><p>One flag. One dramatic upward look. Full patriotic main-character energy. The soundtrack is already playing in my head. Republic Day speech loading… 😂</p></div>
+    </section>
+
+    <section class="section reveal">
+      <div class="heart">
+        <div class="mono">05 / ROASTING PAUSED FOR A MOMENT</div>
+        <h3>Jokes aside, I'm genuinely glad we became friends.</h3>
+        <p>It’s funny how a friendship can begin with an internship and a few WhatsApp messages, then turn into something that feels properly important. We haven't even met in person yet, but the conversations, movie nights, random updates and all the nonsense in between have made plenty of memories already. Thank you for being enthusiastic, funny, and wonderfully yourself — and for making ordinary days a little less ordinary. I hope this year brings you good opportunities, confidence, happiness and lots of reasons to celebrate. You deserve a year that feels as exciting as the plans you make.</p>
+      </div>
+    </section>
+
+    <section class="final reveal" id="birthday">
+      <div class="mono">THE FINAL PHOTO EVIDENCE</div>
+      <div class="goofy">
+        <img src="assets/goofy-closeup.jpg" alt="Nikhila laughing with her eyes closed">
+        <blockquote>One of your favourite poses. 😂<br><br>Still don't know how you believed me and sent this picture. And obviously, I had to spam it in chat and use it here too. This is premium goofy-sticker material. The expression is giving “I'm on another planet” energy. 😭
+          <small>PHOTO CREDIT: YOU SENT IT. I SIMPLY PRESERVED THE CULTURE.</small>
+        </blockquote>
+      </div>
+      <h2>Happy Birthday,<br><span>Nikhila Lanke!</span> ❤️</h2>
+      <p>To more random conversations, more movie nights, more unforgettable memories and — obviously — more failed attempts at pranking me. Stay the same crazy, wonderful person you are. And hopefully, someday, we'll finally watch a movie without needing Google Meet.</p>
+      <div class="signature">WITH LOVE,<br>YOUR FAVOURITE PRANK SURVIVOR 😎</div>
+      <div style="margin-top:28px"><button class="primary" id="confettiBtn">One more birthday surprise ✦</button></div>
+    </section>
+  </main>
+  <footer>MADE WITH FRIENDSHIP, BAD PRANKS & A QUESTIONABLE AMOUNT OF SCREEN TIME.</footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const openBtn=document.getElementById('openBtn');
+openBtn.addEventListener('click',()=>{
+  document.getElementById('intro').style.display='none';
+  document.getElementById('experience').style.display='block';
+  window.scrollTo({top:0,behavior:'instant'});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  confetti(75);
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}});
+},{threshold:.12});
+function confetti(amount=55){
+  const colors=['#f5a9a2','#e7bd75','#f4efe6','#d65c53','#a6b9a1'];
+  for(let i=0;i<amount;i++){
+    const bit=document.createElement('i');bit.className='confetti';
+    bit.style.left=Math.random()*100+'vw';bit.style.background=colors[i%colors.length];
+    bit.style.animationDelay=(Math.random()*1.2)+'s';bit.style.transform='rotate('+(Math.random()*360)+'deg)';
+    bit.style.width=(5+Math.random()*7)+'px';bit.style.height=(8+Math.random()*10)+'px';
+    document.body.appendChild(bit);setTimeout(()=>bit.remove(),5000);
+  }
+}
+document.getElementById('confettiBtn').addEventListener('click',()=>{
+  confetti(110);
+  const toast=document.getElementById('toast');toast.textContent='Birthday blessings dispatched. DSA homework still pending. 😌';toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),3000);
+});
+</script>
+</body>
+</html>
